@@ -5,7 +5,7 @@ Status: Active
 Type: Informational
 Content-Type: text/x-rst
 Created: 21-Sep-2010
-Post-History: 21-Sep-2010, 17-Jan-2011, 13-Jan-2015, 21-Sep-2015
+Post-History: 21-Sep-2010, 17-Jan-2011, 13-Jan-2015, 21-Sep-2015, 10-Jan-2017
 
 
 Abstract
@@ -186,7 +186,7 @@ Required Support for:
 - Ubuntu Wily (15.10)
 - Ubuntu Xenial (16.04)
 
-Recommended Support for: 
+Recommended Support for:
 
 - Debian Jessie
 - Fedora 23
@@ -215,6 +215,67 @@ Exact or Series Requirements:
 
 - Ogre3D 1.9.x
 - Gazebo 7
+- PCL 1.7.x
+- OpenCV 3.1.x
+- Qt 5.3.x
+- PyQt5
+
+Buildsystem support:
+
+- catkin:
+
+  - build from source
+  - release for binary packaging
+  - wiki documentation
+  - continuous integration
+
+- rosbuild:
+
+  - build from source
+
+Lunar Loggerhead (May 2017 - May 2019)
+----------------------------------
+Required Support for:
+
+- Ubuntu Xenial (16.04)
+- Ubuntu Yakkety (16.10)
+- Ubuntu Zesty (17.04)
+
+Recommended Support for:
+
+- Debian Stretch
+- Fedora 24
+- Fedora 25
+
+Architecture supported(CI enabled for):
+- amd64
+- arm32
+- arm64
+Not building x86 packages anymore
+
+Minimum Requirements:
+
+- C++11
+
+  - GCC 4.9 on Linux, as it's the version that Debian Jessie ships with
+
+- Python 2.7
+
+  - Python 3.4 not required, but testing against it is recommended
+
+- Lisp SBCL 1.2.4
+- CMake 3.0.2
+
+  - Debian Jessie ships with CMake 3.0.2
+
+- Boost 1.55
+
+  - Debian Jessie ships with Boost 1.55
+
+Exact or Series Requirements:
+
+- Ogre3D 1.9.x
+- Gazebo 8
 - PCL 1.7.x
 - OpenCV 3.1.x
 - Qt 5.3.x
