@@ -407,7 +407,7 @@ References and Footnotes
    (http://www.ros.org/reps/rep-0108.html)
 
 .. [3] Distribution Timeline
-   (http://wiki.ros.org/Distributions/Timeline)
+   (http://wiki.ros.org/Distributions)
 
 Copyright
 =========
