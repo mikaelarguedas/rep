@@ -166,7 +166,7 @@ Exact or Series Requirements:
 - PCL 1.7.x
 - OpenCV 2.4.x
 
-Buildsystem support:
+Build System Support:
 
 - catkin:
 
@@ -220,7 +220,7 @@ Exact or Series Requirements:
 - Qt 5.3.x
 - PyQt5
 
-Buildsystem support:
+Build System Support:
 
 - catkin:
 
@@ -246,7 +246,7 @@ Recommended Support for:
 - Debian Stretch
 - Fedora 25
 
-Architecture Supported:
+Architectures Supported:
 
 - amd64
 - arm32
@@ -280,7 +280,7 @@ Exact or Series Requirements:
 - Qt 5.3.x
 - PyQt5
 
-Buildsystem support:
+Build System Support:
 
 - catkin:
 
@@ -315,7 +315,7 @@ Architectures
 
 As of ROS Lunar, we do not build packages for x86 architectures.
 Ubuntu switched its default to 64bits and we noticed a significant decrease of
-ROS packages downloads for this architecture.
+ROS package downloads for this architecture.
 
 C++
 ---
