@@ -234,7 +234,7 @@ Buildsystem support:
   - build from source
 
 Lunar Loggerhead (May 2017 - May 2019)
-----------------------------------
+--------------------------------------
 Required Support for:
 
 - Ubuntu Xenial (16.04)
@@ -250,6 +250,7 @@ Architecture supported(CI enabled for):
 - amd64
 - arm32
 - arm64
+
 Not building x86 packages anymore
 
 Minimum Requirements:
@@ -387,7 +388,7 @@ This REP applies to stacks in the `desktop-extras` variant [2]_ for Diamondback.
 Non-core Stacks
 ===============
 
-    And thirdly, the code is more what you'd call "guidelines" than actual rules...
+And thirdly, the code is more what you'd call "guidelines" than actual rules...
 
 We hope that ROS stack maintainers will make every effort to comply
 with the target platforms within this REP, but we recognize that ROS
