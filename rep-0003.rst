@@ -260,7 +260,7 @@ Minimum Requirements:
 
 - Python 2.7
 
-  - Python 3.4 not required, but testing against it is recommended
+  - Python 3.5 not required, but testing against it is recommended
 
 - Lisp SBCL 1.2.4
 - CMake 3.0.2
