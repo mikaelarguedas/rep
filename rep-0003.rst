@@ -313,7 +313,9 @@ These targets, including starting and ending support dates, are based on the Dis
 Architectures
 -------------
 
-As of ROS Lunar, we do not build packages fo x86 architectures. Ubuntu switched its default to 64bits and we noticed a significant decrease of ROS packages downloads for this architecture.
+As of ROS Lunar, we do not build packages for x86 architectures.
+Ubuntu switched its default to 64bits and we noticed a significant decrease of
+ROS packages downloads for this architecture.
 
 C++
 ---
