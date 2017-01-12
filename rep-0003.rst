@@ -246,12 +246,11 @@ Recommended Support for:
 - Debian Stretch
 - Fedora 25
 
-Architecture supported(CI enabled for):
+Architecture Supported:
+
 - amd64
 - arm32
 - arm64
-
-Not building x86 packages anymore
 
 Minimum Requirements:
 
@@ -310,6 +309,11 @@ Target platforms for future releases are speculative and are based on
 consulting Ubuntu's release and end-of-life schedule [1]_.
 
 These targets, including starting and ending support dates, are based on the Distribution Timeline to meet minimum requirements. [3]_
+
+Architectures
+-------------
+
+As of ROS Lunar, we do not build packages fo x86 architectures. Ubuntu switched its default to 64bits and we noticed a significant decrease of ROS packages downloads for this architecture.
 
 C++
 ---
