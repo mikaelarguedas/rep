@@ -254,22 +254,14 @@ Architectures Supported:
 
 Minimum Requirements:
 
-- C++11
-
-  - GCC 4.9 on Linux, as it's the version that Debian Jessie ships with
-
+- C++11 (same as Kinetic)
 - Python 2.7
 
   - Python 3.5 not required, but testing against it is recommended
 
 - Lisp SBCL 1.2.4
-- CMake 3.0.2
-
-  - Debian Jessie ships with CMake 3.0.2
-
-- Boost 1.55
-
-  - Debian Jessie ships with Boost 1.55
+- CMake 3.0.2 (same as Kinetic)
+- Boost 1.55 (same as Kinetic)
 
 Exact or Series Requirements:
 
