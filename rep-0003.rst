@@ -255,7 +255,7 @@ Architectures Supported:
 Minimum Requirements:
 
  The following requirements are the same as Kinetic's to avoid maintainers
- to branch out before the next LTS release
+ branching out before the next LTS release
 
 - C++11
 - Python 2.7
