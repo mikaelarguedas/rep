@@ -254,14 +254,17 @@ Architectures Supported:
 
 Minimum Requirements:
 
-- C++11 (same as Kinetic)
+ The following requirements are the same as Kinetic's to avoid maintainers
+ to branch out before the next LTS release
+
+- C++11
 - Python 2.7
 
   - Python 3.5 not required, but testing against it is recommended
 
 - Lisp SBCL 1.2.4
-- CMake 3.0.2 (same as Kinetic)
-- Boost 1.55 (same as Kinetic)
+- CMake 3.0.2
+- Boost 1.55
 
 Exact or Series Requirements:
 
