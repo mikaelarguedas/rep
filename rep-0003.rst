@@ -241,7 +241,7 @@ Architectures Supported:
 
 Minimum Requirements:
 
- The following requirements are the same as Kinetic's to avoid maintainers
+ Most of the following requirements are the same as Kinetic's to avoid maintainers
  branching out before the next LTS release
 
 - C++11
