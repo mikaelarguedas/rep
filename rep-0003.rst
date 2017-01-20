@@ -258,7 +258,7 @@ Exact or Series Requirements:
 - Ogre3D 1.9.x
 - Gazebo 8
 - PCL 1.7.x
-- OpenCV 3.1.x
+- OpenCV 3.2.x
 - Qt 5.3.x
 - PyQt5
 
