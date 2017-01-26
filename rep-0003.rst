@@ -256,7 +256,15 @@ Minimum Requirements:
 Exact or Series Requirements:
 
 - Ogre3D 1.9.x
-- Gazebo 8
+- Gazebo 8 (packaged by OSRF)
+
+  - ROS won't use upstream Gazebo for the upcoming few releases because of a mismatch
+    between upstream versions on targeted Ubuntu distributions
+  - In the case of Lunar:
+
+    - Zesty ships with Gazebo 8
+    - Yakkety and Xenial ship with Gazebo 7
+
 - PCL 1.7.x
 - OpenCV 3.2.x
 - Qt 5.3.x
