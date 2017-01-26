@@ -265,7 +265,8 @@ Exact or Series Requirements:
     - Zesty ships with Gazebo 8
     - Yakkety and Xenial ship with Gazebo 7
 
-- PCL 1.7.x
+- PCL 1.7.x (Xenial)
+- PCL 1.8.x (Other Systems)
 - OpenCV 3.2.x
 - Qt 5.3.x
 - PyQt5
