@@ -231,7 +231,7 @@ Required Support for:
 Recommended Support for:
 
 - Debian Stretch
-- Fedora 25
+- Fedora 26
 
 Architectures Supported:
 
