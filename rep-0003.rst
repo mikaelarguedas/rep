@@ -295,7 +295,7 @@ These targets, including starting and ending support dates, are based on the Dis
 Architectures
 -------------
 
-As of ROS Lunar, we do not build packages for i386 architectures.
+As of ROS Lunar, we do not build packages for i386 architectures. Released code is still expected to build on i386.
 Ubuntu switched its default to 64bits and we noticed a significant decrease of
 ROS package downloads for this architecture.
 
