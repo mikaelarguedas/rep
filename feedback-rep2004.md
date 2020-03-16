@@ -21,11 +21,11 @@ CVSS is the defacto standard for risk assessing vulnerabilities.  Although flawe
 
 #### Remediation Timeline
 Here’s an initial proposal on responsiveness based on the principles above.  This would be a commitment by the ROS 2 developer community.
-Triage within 3 days for all reports, triage assigns a CVSS score and a maintainer to provide a fix
+Triage within 7 natural days (one week) for all reports, triage assigns a CVSS score and a maintainer to provide a fix
 Maintainer is expected to provide a fix according to this timeline; the maintainer may also change the CVSS score as they dig into the issue:
 
 
-|                   | High Risk<br> CVSS 9+ | Medium Risk<br> CVSS 6-9            | Low Risk<br>CVSS <6                       |
+|                   | Critical/High Risk<br> CVSS 7.0+ | Medium Risk<br> CVSS 4.0-6.9            | Low Risk<br>CVSS <3.9                       |
 | ----------------- | --------- | ---------------------- | ------------------------------ |
 | Quality Level 1   | 7 days    | 30 days                | No timeline, use issue         |
 | Quality Level 2   | 7 days    | 30 days                | No timeline, use issue         |
@@ -34,7 +34,7 @@ Maintainer is expected to provide a fix according to this timeline; the maintain
 
 
 
-Once the maintainer has approved the code update, the code is built and distributed according to the normal timeline.
+Once the maintainer has approved the code update, the code is built and distributed according to the normal timeline (next sync for that ROS distribution).
 
 
 ## Suggestions outside of REP but linked to it:
