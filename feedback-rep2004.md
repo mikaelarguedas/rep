@@ -1,44 +1,51 @@
 ## [ROS-Security] Feedback to REP-2004 Package quality categories
 
-### General remarks
+The proposal looks great and we really like the goals of it.
+The voluntary nature of it makes us wonder how to best incentivize people to pay close attention to the quality and security of their packages.
+Based on this we compiled a list of questions/remarks to hopefully spark conversation on how things could be improved for a global buy-in.
+Most would not fit in this REP as is but could help picture what the impact of the REP can be and what framework around it can drive ROS quality and security forward.
 
-- How does a user consume the fact that a given package is in a given category without undue burden? Forcing the user to check a list maintained on a wiki requires them to have 100% knowledge of every dependency of every package that they may have just `apt install`ed. This could (and should) be scripted, but that still puts the onus of checking on the user. Could something similar to ubuntu’s repository components (main, restricted, universe…) be used? Then they actually need to opt-in to actually installing software of a given quality level.
-- Lack of granularity in ‘quality level’
-While having a few 'quality levels' is great to get a very quick overview of a package quality, it may also be misleading, masking the granularity of reality. A package that excels in all metrics but performs miserably in a single one (for any reason) may be ranked in one of the lower grades thus not encouraging its use. In reality the package may only need a little external help to get a full score.
-An example of this is a package not available on one of the Tier1 platforms, thus not qualifying to be quality level < 4. But being production ready and complying with every other criterium to be level 1.
-We think adding a full 'report card' could be useful to assess how a package is failing to meet criteria for the higher quality level. For this 'report card' to be useful, it should be quickly and easily readable. We could consider a 'spider chart' (or [radar chart as per wikipedia](https://en.wikipedia.org/wiki/Radar_chart)), or a table like [here](https://github.com/ros-infrastructure/rep/blob/c8bd456f531acc4863d0bb8888c28b10f9271492/rep-2004.rst#quality-level-comparison-chart).
+- incentive:
+What is the incentive for a maintainer to aim to a high category ? Is there a clear benefit in being in a specific one ?
+- accountability:
+How to report that a package doesn't match the claimed quality level?
+What is the process from there?
+Why will package authors care? And if they don't, why will users find meaning in these categories?
+- Accessibility:
+  - How will use access and consume the quality levels information?
+  - Repository components [were briefly mentioned](https://github.com/ros-infrastructure/rep/pull/218#discussion_r376734511) as one way to actually have a side effect of being in a given category (as it would directly relate to users opting into using packages of a given category). However, there is a desire not to mandate such things from this REP, which re-emphasizes the above point. Is the plan for the development guide or a further REP to build on this one?
+- Granularity:
+While having a few 'quality levels' is great to get a very quick overview of a package quality, it may also be misleading, masking the granularity of reality.
+A package that excels in all metrics but performs miserably in a single one (for any reason) may be ranked in one of the lower grades thus not encouraging its use.
+In reality the package may only need a little external help to get a full score.
+An example of this is a package not available on one of the Tier1 platforms, thus not qualifying to be quality level < 4 while being production ready and complying with every other criterium to be level 1.
+We think adding a full 'report card' could be useful to assess how a package is failing to meet criteria for the higher quality level.
+For this 'report card' to be useful, it should be quickly and easily readable.
+We could consider a 'spider chart' (or [radar chart as per wikipedia](https://en.wikipedia.org/wiki/Radar_chart)), or a table like [here](https://github.com/ros-infrastructure/rep/blob/c8bd456f531acc4863d0bb8888c28b10f9271492/rep-2004.rst#quality-level-comparison-chart).
 
-### Security specific context and feedback
+- How to make declaring quality level less cumbersome:
+  Consider providing tooling to help people evaluate / generate the quality level and files associated with quality level (could go from a simple list of Y/N questions to actually pulling quality levels of all dependencies etc)
 
-#### Quality Levels and the Vulnerability Disclosure Policy
-The VDP tells the public we’d like a flat 90-day grace period between when we receive a vulnerability before it’s made public.  In the interest of keeping the VDP simple, I recommend keeping code quality out of this public-facing document.  We can--and should--strive to do better for high quality code, but I don’t believe that needs to be a part of this document.
+- Non ROS packages:
+  - How does this connect with REP-2005 ?
+  - If a package listed in REP-2005 doesn't match quality criteria here, should it disqualify dependent from claiming that level?
 
-#### Quality Levels and Vulnerability Remediation
-Internally, however, we should set a higher standard for higher quality code.
-Level 1 and 2 code will be widely deployed in the field. Fixes should be made available this code quickly to protect production robots.
-Level 3 and some level 4 code may not be deployed in robots, but will be used daily by firms that build robots.  High risk vulnerabilities should be handled quickly to protect development environments.
-CVSS is the defacto standard for risk assessing vulnerabilities.  Although flawed, it’s better than trying to create a new standard.
+- Tooling to increase adoption:
+  - Consider providing tooling to help people generate the quality declaration files associated with quality level (could go from a simple list of Y/N questions to actually pulling info of all the dependencies etc)
 
-#### Remediation Timeline
-Here’s an initial proposal on responsiveness based on the principles above.  This would be a commitment by the ROS 2 developer community.
-Triage within 7 natural days (one week) for all reports, triage assigns a CVSS score and a maintainer to provide a fix
-Maintainer is expected to provide a fix according to this timeline; the maintainer may also change the CVSS score as they dig into the issue:
-
+- Criteria relevant for quality and security:
+As mentionned by @vmayoral above, quality and security really play hand in hand and we should really strive to improve both for any ROS package intended to be used widely, especially those in or talking to deployed systems.
+  - Provide minimum requirements for code quality based on analysis tools: This was mentioned earlier [here](https://github.com/ros-infrastructure/rep/pull/218#discussion_r370583550) It would be great to have a set of required linters for a specific level. It could be part of `ament_lint_common`, or a different set of linters only for "Level1". Inputs from the quality WG, tooling WG, TSC and other interested parties would be very valuable to converge on a set of tools + metrics.
+  - Can maintainer responsiveness be taken into account for quality levels?
+  An ability to fix and release vulnerabilities in a timely manner is something we find relevant when assessing the quality of a package in the long run
+  - Fixing reported issues: The security WG has been working on putting together a Vulnerability Disclosure Policy document for ROS packages. The level of responsiveness to addressing vulnerabilities is in our opinion an important criteria for quality levels. Here is an example (quantitative this time)
 
 |                   | Critical/High Risk<br> CVSS 7.0+ | Medium Risk<br> CVSS 4.0-6.9            | Low Risk<br>CVSS <3.9                       |
 | ----------------- | --------- | ---------------------- | ------------------------------ |
 | Quality Level 1   | 7 days    | 30 days                | No timeline, use issue         |
 | Quality Level 2   | 7 days    | 30 days                | No timeline, use issue         |
 | Quality Level 3   | 30 days   | No timeline, use issue | No timeline, use issue         |
-| Quality Level 4-5 | 30 days   | No timeline, use issue | No timeline, use issue         |
+| Quality Level 4-5 | No timeline, use issue   | No timeline, use issue | No timeline, use issue         |
 
-
-
-Once the maintainer has approved the code update, the code is built and distributed according to the normal timeline (next sync for that ROS distribution).
-
-
-## Suggestions outside of REP but linked to it:
-
-- Consider providing tooling to help people evaluate / generate the quality level and files associated with quality level (could go from a simple list of Y/N questions to actually pulling info of all the dependencies etc)
-- How does this connect with REP-2005 ? How would one go about filing vulnerabilities in e.g. Fast-RTPS?
-- Provide recommendation on linters checking for quality / security issues (see https://github.com/ros-infrastructure/rep/pull/218#discussion_r370583550) (TODO by Security WG)
+Here we take an example of different expectations for fixing and releasing based on the quality level and the criticality of the issue.
+While the scoring mechanism used and the timelines are up for discussion we'd like to know if such an approach could be considered for quality levels.
