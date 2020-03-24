@@ -36,9 +36,7 @@ We could consider a 'spider chart' (or [radar chart as per wikipedia](https://en
 - Criteria relevant for quality and security:
 As mentionned by @vmayoral above, quality and security really play hand in hand and we should really strive to improve both for any ROS package intended to be used widely, especially those in or talking to deployed systems.
   - Provide minimum requirements for code quality based on analysis tools: This was mentioned earlier [here](https://github.com/ros-infrastructure/rep/pull/218#discussion_r370583550) It would be great to have a set of required linters for a specific level. It could be part of `ament_lint_common`, or a different set of linters only for "Level1". Inputs from the quality WG, tooling WG, TSC and other interested parties would be very valuable to converge on a set of tools + metrics.
-  - Can maintainer responsiveness be taken into account for quality levels?
-  An ability to fix and release vulnerabilities in a timely manner is something we find relevant when assessing the quality of a package in the long run
-  - Fixing reported issues: The security WG has been working on putting together a Vulnerability Disclosure Policy document for ROS packages. The level of responsiveness to addressing vulnerabilities is in our opinion an important criteria for quality levels. Here is an example (quantitative this time)
+  - Fixing reported issues: The level of responsiveness to addressing vulnerabilities is in our opinion an important criteria for quality levels, and is closely related to the Vulnerability Disclosure Policy that is currently undergoing review. Here is an example:
 
 |                   | Critical/High Risk<br> CVSS 7.0+ | Medium Risk<br> CVSS 4.0-6.9            | Low Risk<br>CVSS <3.9                       |
 | ----------------- | --------- | ---------------------- | ------------------------------ |
